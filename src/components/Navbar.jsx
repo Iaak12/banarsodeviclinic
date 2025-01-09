@@ -40,7 +40,7 @@ const Navbar = () => {
                     <Link to="about" spy={true} smooth={true} duration={500} className="hover:text-hoverColor transition-all cursor-pointer">About Us</Link>
                     <Link to="services" spy={true} smooth={true} duration={500} className="hover:text-hoverColor transition-all cursor-pointer">Services</Link>
                     <Link to="doctors" spy={true} smooth={true} duration={500} className="hover:text-hoverColor transition-all cursor-pointer">Doctors</Link>
-                    <Link to="blog" spy={true} smooth={true} duration={500} className="hover:text-hoverColor transition-all cursor-pointer">Blog</Link>
+                    <Link to="blogs" spy={true} smooth={true} duration={500} className="hover:text-hoverColor transition-all cursor-pointer">Blog</Link>
               
                      </nav>
                 
