@@ -6,10 +6,10 @@ const Footer = () => {
     <div className=" bg-backgroundColor text-white rounded-t-3xl mt-8 md:mt-0">
       <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
         <div className=" w-full md:w-1/4">
-          <h1 className=" font-semibold text-xl pb-4">WellnessVista</h1>
+          <h1 className=" font-semibold text-xl pb-4">BanarsoDeviClinic</h1>
           <p className=" text-sm">
             Our team of dedicated doctors, each specializing in unique fields
-            such as orthopedics, cardiology, pediatrics, neurology, dermatology,
+            such as chiropractic therapy, rehabilitation exercises, dry needling, manual treatment, scrapping,
             and more.
           </p>
         </div>
@@ -55,7 +55,7 @@ const Footer = () => {
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Lab Test
+              Cupping
             </Link>
             <Link
               to="services"
@@ -64,7 +64,7 @@ const Footer = () => {
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Health Check
+              Chiropractic therapy
             </Link>
             <Link
               to="services"
@@ -73,7 +73,7 @@ const Footer = () => {
               duration={500}
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Heart Health
+              Manual Treatment
             </Link>
           </nav>
         </div>
@@ -95,7 +95,7 @@ const Footer = () => {
       <div>
         <p className=" text-center py-4">
           @copyright developed by
-          <span className=" text-hoverColor"> champion programmers</span> | All
+          <span className=" text-hoverColor">Md. Ayaz</span> | All
           rights reserved
         </p>
       </div>
