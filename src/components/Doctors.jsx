@@ -8,36 +8,37 @@ import { FaArrowRight } from "react-icons/fa";
 const Doctors = () => {
   const data = [
     {
-      img: "./src/assets/doc1.jpg",
+      img: "/assets/doc1.jpg",
       name: "Dr. Serena Mitchell",
       specialties: "Orthopedic Surgeon",
     },
     {
-      img: "./src/assets/doc2.jpg",
+      img: "/assets/doc2.jpg",
       name: "Dr. Julian Bennett",
       specialties: "Cardiologist",
     },
     {
-      img: "./src/assets/doc3.jpg",
+      img: "/assets/doc3.jpg",
       name: "Dr. Camila Rodriguez",
       specialties: "Pediatrician",
     },
     {
-      img: "./src/assets/doc4.jpg",
+      img: "/assets/doc4.jpg",
       name: "Dr. Victor Nguyen",
       specialties: "Neurologist",
     },
     {
-      img: "./src/assets/doc5.jpg",
+      img: "/assets/doc5.jpg",
       name: "Dr. Ethan Carter",
       specialties: "Dermatologist",
     },
     {
-      img: "./src/assets/doc6.jpg",
+      img: "/assets/doc6.jpg",
       name: "Dr. Olivia Martinez",
       specialties: "Ophthalmologist",
     },
   ];
+  
 
   const slider = useRef(null);
 
