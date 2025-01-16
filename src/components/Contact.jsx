@@ -20,7 +20,7 @@ const Contact = () => {
   }, [scrollToForm]);
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 pt-20">
+    <div className="min-h-screen bg-gray-100 text-gray-800 pt-16">
       {/* Hero Section */}
       <div className="bg-backgroundColor text-white py-12 px-6 text-center">
         <h1 className="text-4xl font-bold">Contact Us</h1>
