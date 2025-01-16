@@ -1,140 +1,105 @@
-import { Link } from "react-scroll";
-import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className=" bg-backgroundColor text-white rounded-t-3xl mt-8 md:mt-0">
-      <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
-        <div className=" w-full md:w-1/4">
-          <h1 className=" font-semibold text-xl pb-4">BanarsoDeviClinic</h1>
-          <p className=" text-sm">
-            Our team of dedicated doctors, each specializing in unique fields
-            such as chiropractic therapy, rehabilitation exercises, dry needling, manual treatment, scrapping,
-            and more.
-          </p>
+    <footer className="bg-backgroundColor text-white py-8">
+      <div className="container mx-auto px-5 md:px-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Column 1: About Section */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">BanarsoDeviClinic</h2>
+            <p className="text-sm leading-6">
+              Your trusted health partner offering top-notch medical services
+              with a team of experienced doctors. We’re committed to your
+              well-being and health.
+            </p>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
+            <ul className="text-sm space-y-2">
+              <li>
+                <Link to="/" className="hover:text-hoverColor">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-hoverColor">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-hoverColor">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/doctors" className="hover:text-hoverColor">
+                  Doctors
+                </Link>
+              </li>
+              <li>
+                <Link to="/blogs" className="hover:text-hoverColor">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-hoverColor">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Social Media */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
+            <p className="text-sm mb-4">Stay connected through social media:</p>
+            <div className="flex space-x-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-hoverColor"
+              >
+                <FaFacebook size={24} />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-hoverColor"
+              >
+                <FaTwitter size={24} />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-hoverColor"
+              >
+                <FaInstagram size={24} />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-hoverColor"
+              >
+                <FaLinkedin size={24} />
+              </a>
+            </div>
+          </div>
         </div>
-        <div>
-          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">About Us</h1>
-          <nav className=" flex flex-col gap-2">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" hover:text-hoverColor transition-all cursor-pointer"
-            >
-              About
-            </Link>
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" hover:text-hoverColor transition-all cursor-pointer"
-            >
-              Services
-            </Link>
-            <Link
-              to="doctors"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" hover:text-hoverColor transition-all cursor-pointer"
-            >
-              Doctors
-            </Link>
-          </nav>
-        </div>
-        <div>
-          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Services</h1>
-          <nav className=" flex flex-col gap-2">
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" hover:text-hoverColor transition-all cursor-pointer"
-            >
-              Cupping
-            </Link>
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" hover:text-hoverColor transition-all cursor-pointer"
-            >
-              Chiropractic therapy
-            </Link>
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" hover:text-hoverColor transition-all cursor-pointer"
-            >
-              Manual Treatment
-            </Link>
-          </nav>
-        </div>
-        <div className=" w-full md:w-1/4">
-          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Contact Us</h1>
-          <nav className=" flex flex-col gap-2">
-            <Link to="/" spy={true} smooth={true} duration={500}>
-              123 Elm Street, Suite 456 Springfield, IL 62701 United States
-            </Link>
-            <Link to="/" spy={true} smooth={true} duration={500}>
-              support@care.com
-            </Link>
-            <Link to="/" spy={true} smooth={true} duration={500}>
-              +123-456-7890
-            </Link>
-          </nav>
+
+        {/* Footer Bottom */}
+        <div className="mt-8 text-center text-sm border-t border-gray-700 pt-4">
+          <p>&copy; {new Date().getFullYear()} BanarsoDeviClinic. All rights reserved.</p>
         </div>
       </div>
-      {/* Social Media Section */}
-      <div className="flex justify-center items-center gap-4 py-4 border-t border-gray-700">
-        <a
-          href="https://www.facebook.com/gautam.batra.5/reels/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-hoverColor transition-all text-2xl"
-        >
-          <FaFacebook />
-        </a>
-        <a
-          href="https://www.instagram.com/gautambatrachiropractic/?hl=en"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-hoverColor transition-all text-2xl"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/gautam-batra-2b6a61129/?originalSubdomain=in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-hoverColor transition-all text-2xl"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://www.youtube.com/@gautambatrachiropractic"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-hoverColor transition-all text-2xl"
-        >
-          <FaYoutube />
-        </a>
-      </div>
-      <div>
-        <p className=" text-center py-4">
-          @copyright developed by
-          <span className=" text-hoverColor"> Md. Ayaz</span> | All
-          rights reserved
-        </p>
-      </div>
-    </div>
+    </footer>
   );
 };
 

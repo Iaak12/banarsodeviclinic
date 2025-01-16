@@ -16,7 +16,7 @@ const Services = () => {
   const icon6 =  <TbMassage size={35} className="text-backgroundColor"/>
 
   return (
-    <div className="min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-24 lg:pt-16 ">
+    <div id="services" className="min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-24 lg:pt-26 ">
         <div className="flex flex-col items-center lg:flex-row justify-between">
             <div>
                 <h1 className="text-4xl font-semibold text-center lg:text-start">Our Services</h1>
