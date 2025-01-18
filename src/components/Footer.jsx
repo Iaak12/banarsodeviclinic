@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-backgroundColor text-white py-8">
+    <footer className="bg-backgroundColor text-white py-10">
       <div className="container mx-auto px-5 md:px-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Column 1: About Section */}
           <div>
-            <h2 className="text-lg font-semibold mb-4">BanarsoDeviClinic</h2>
+            <h2 className="text-lg font-semibold mb-4">Banarso Devi Clinic</h2>
             <p className="text-sm leading-6">
               Your trusted health partner offering top-notch medical services
               with a team of experienced doctors. We’re committed to your
@@ -16,7 +17,24 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Column 2: Address Section */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Contact Information</h2>
+            <p className="text-sm leading-6">
+              <strong>Address:</strong> <br />
+              BANARSO DEVI CLINIC {`{SPINE X}`} <br />
+              56/7, Basement, Old Rajender Nagar, 
+              Opposite Grover Mithaiwala
+              New Delhi-110060.
+              <span className="mt-2 block">Nearest Metro Station: Karol Bagh</span>
+            </p>
+            <p className="text-sm mt-4">
+              <strong>Phone:</strong> <br />
+              <a href="tel:9953626323" className="hover:text-hoverColor">9953626323</a>, <a href="tel:9891517051" className="hover:text-hoverColor">9891517051</a>
+            </p>
+          </div>
+
+          {/* Column 3: Quick Links */}
           <div>
             <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
             <ul className="text-sm space-y-2">
@@ -53,7 +71,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Social Media */}
+          {/* Column 4: Social Media */}
           <div>
             <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
             <p className="text-sm mb-4">Stay connected through social media:</p>
@@ -65,14 +83,6 @@ const Footer = () => {
                 className="hover:text-hoverColor"
               >
                 <FaFacebook size={24} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-hoverColor"
-              >
-                <FaTwitter size={24} />
               </a>
               <a
                 href="https://instagram.com"
@@ -90,11 +100,27 @@ const Footer = () => {
               >
                 <FaLinkedin size={24} />
               </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-red-500"
+              >
+                <FaYoutube size={24} />
+              </a>
+              <a
+                href="https://wa.me/919953626323"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-500"
+              >
+                <FaWhatsapp size={24} />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Footer Bottom */}
+        {/* Footer Bottom Section */}
         <div className="mt-8 text-center text-sm border-t border-gray-700 pt-4">
           <p>&copy; {new Date().getFullYear()} BanarsoDeviClinic. All rights reserved.</p>
         </div>

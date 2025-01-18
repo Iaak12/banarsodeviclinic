@@ -1,4 +1,3 @@
-
 import Button from "../layouts/Button";
 import BlogCard from "../layouts/BlogCard";
 import img1 from "../assets/blog1.jpg";
@@ -17,8 +16,7 @@ const Blogs = () => {
             Latest Post
           </h1>
           <p className=" mt-2 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-            quidem.
+            Explore our latest insights and expert advice on spine health, mental well-being, and more.
           </p>
         </div>
         <div className=" mt-4 lg:mt-0">
@@ -27,15 +25,36 @@ const Blogs = () => {
       </div>
       <div className=" my-8">
         <div className=" flex flex-wrap justify-center gap-5">
-          <BlogCard img={img1} headlines="Unraveling the Mysteries of Sleep" />
-          <BlogCard img={img2} headlines="The Heart-Healthy Diet" />
-          <BlogCard
-            img={img3}
-            headlines="Understanding Pediatric Vaccinations"
+          <BlogCard 
+            img={img1} 
+            headlines="Preventing Spine Injuries in Daily Life"
+            description="Learn effective techniques to protect your spine during daily activities like sitting, lifting, and exercising."
           />
-          <BlogCard img={img4} headlines="Navigating Mental Health" />
-          <BlogCard img={img5} headlines="The Importance of Regular Exercise" />
-          <BlogCard img={img6} headlines="Skin Health 101" />
+          <BlogCard 
+            img={img2} 
+            headlines="The Link Between Posture and Chronic Pain"
+            description="Discover how poor posture can lead to chronic neck and back pain, and how to correct it."
+          />
+          <BlogCard 
+            img={img3} 
+            headlines="Pediatric Spine Health: Tips for Parents"
+            description="Understand the importance of spine care for children and the role of backpacks, posture, and physical activity."
+          />
+          <BlogCard 
+            img={img4} 
+            headlines="Managing Stress to Prevent Spine Problems"
+            description="Explore the connection between stress and spine health, and simple relaxation techniques to improve your posture."
+          />
+          <BlogCard 
+            img={img5} 
+            headlines="Early Signs of Spine Disorders"
+            description="Know the red flags of potential spine disorders and when to consult a specialist for early intervention."
+          />
+          <BlogCard 
+            img={img6} 
+            headlines="The Role of Exercise in Spine Health"
+            description="Find out how specific exercises can strengthen your back and reduce the risk of spine-related issues."
+          />
         </div>
       </div>
     </div>

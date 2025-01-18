@@ -43,23 +43,28 @@ const Contact = () => {
             <div className="mt-6 space-y-4">
               <div className="flex items-center">
                 <span className="text-xl text-backgroundColor font-bold mr-4">
+                  📍
+                </span>
+                <p className="text-gray-700">
+                  BANARSO DEVI CLINIC {"{SPINE X}"}<br />
+                  56/7, Basement, Old Rajender Nagar, Opposite Grover Mithaiwala<br />
+                  New Delhi-110060.<br />
+                  Nearest metro station - Karol Bagh.
+                </p>
+              </div>
+              <div className="flex items-center">
+                <span className="text-xl text-backgroundColor font-bold mr-4">
                   📞
                 </span>
-                <p className="text-gray-700">+91 12345 67890</p>
+                <p className="text-gray-700">
+                  +91 9953626323, +91 9891517051
+                </p>
               </div>
               <div className="flex items-center">
                 <span className="text-xl text-backgroundColor font-bold mr-4">
                   📧
                 </span>
                 <p className="text-gray-700">contact@banarsodeviclinic.com</p>
-              </div>
-              <div className="flex items-center">
-                <span className="text-xl text-backgroundColor font-bold mr-4">
-                  📍
-                </span>
-                <p className="text-gray-700">
-                  123 Clinic Road, Your City, India
-                </p>
               </div>
             </div>
           </div>
@@ -150,6 +155,56 @@ const Contact = () => {
                 Submit
               </button>
             </form>
+          </div>
+        </div>
+
+        {/* Timetable Section */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-semibold text-center text-backgroundColor">
+            Timings
+          </h2>
+          <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
+            <table className="table-auto w-full text-left">
+              <thead>
+                <tr className="text-gray-700">
+                  <th className="py-2 px-4 border-b-2">Day</th>
+                  <th className="py-2 px-4 border-b-2">Timings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="py-2 px-4 border-b">Monday</td>
+                  <td className="py-2 px-4 border-b">11am-2:30pm, 5:30pm-7:30pm</td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-4 border-b">Tuesday</td>
+                  <td className="py-2 px-4 border-b">11am-2:30pm</td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-4 border-b">Wednesday</td>
+                  <td className="py-2 px-4 border-b">11am-2:30pm, 5:30pm-7:30pm</td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-4 border-b">Thursday</td>
+                  <td className="py-2 px-4 border-b text-gray-500">OFF</td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-4 border-b">Friday</td>
+                  <td className="py-2 px-4 border-b">11am-2:30pm, 5:30pm-7:30pm</td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-4 border-b">Saturday</td>
+                  <td className="py-2 px-4 border-b">11am-3pm</td>
+                </tr>
+                <tr>
+                  <td className="py-2 px-4 border-b">Sunday</td>
+                  <td className="py-2 px-4 border-b">12pm-3pm</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="text-gray-600 mt-4 text-center">
+              Direct walk-in, no appointment required as per timings mentioned.
+            </p>
           </div>
         </div>
       </div>

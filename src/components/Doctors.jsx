@@ -8,9 +8,9 @@ import { FaArrowRight } from "react-icons/fa";
 const Doctors = () => {
   const data = [
     {
-      img: "/assets/doc1.jpg",
-      name: "Dr. Serena Mitchell",
-      specialties: "Orthopedic Surgeon",
+      img: "/assets/dr1.jpg",
+      name: "Dr. Ruqayya",
+      specialties: "PT",
     },
     {
       img: "/assets/doc2.jpg",
@@ -87,8 +87,7 @@ const Doctors = () => {
             Our Doctors
           </h1>
           <p className=" mt-2 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-            quidem.
+            
           </p>
         </div>
         <div className="flex gap-5 mt-4 lg:mt-0">
