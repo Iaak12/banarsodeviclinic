@@ -39,9 +39,9 @@ const Navbar = () => {
           <Link to="/doctors" className="hover:text-hoverColor transition-all">
             Doctors
           </Link>
-          <Link to="/blogs" className="hover:text-hoverColor transition-all">
+          {/* <Link to="/blogs" className="hover:text-hoverColor transition-all">
             Blog
-          </Link>
+          </Link> */}
         </nav>
 
         <div className="hidden lg:flex">
