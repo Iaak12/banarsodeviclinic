@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
 import Doctors from "./components/Doctors";
-import Blog from "./components/Blog";
+// import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ServiceDetailPage from "./components/ServiceDetailPage";
@@ -22,7 +22,6 @@ function App() {
               <About />
               <Services />
               <Doctors />
-              <Blog />
               <Contact />
             </>
           }
@@ -31,7 +30,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
         <Route path="/doctors" element={<Doctors />} />
-        <Route path="/blogs" element={<Blog />} />
+        {/* <Route path="/blogs" element={<Blog />} /> */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
