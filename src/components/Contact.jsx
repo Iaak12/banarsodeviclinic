@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  // const form = useRef();
   const location = useLocation();
   const [scrollToForm, setScrollToForm] = useState(false);
+  const [message, setMessage] = useState(""); // For success/error feedback
 
   useEffect(() => {
     if (location.state?.scrollToForm) {
@@ -27,16 +27,22 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_o6jx1jd', 'template_a75bv9b', form.current, {
-        publicKey: '1ZjJFEuVboqfjjDW8',
-      })
+      .sendForm(
+        "service_o6jx1jd", // Service ID
+        "template_a75bv9b", // Template ID
+        form.current, // Form reference
+        "1ZjJFEuVboqfjjDW8" // Public Key (User ID)
+      )
       .then(
         () => {
-          console.log('SUCCESS!');
+          setMessage("Your message has been sent successfully!"); // Success feedback
+          form.current.reset(); // Clear the form
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          setMessage(
+            `There was an error sending your message: ${error.text}` // Error feedback
+          );
+        }
       );
   };
 
@@ -62,6 +68,7 @@ const Contact = () => {
               us an email or call us.
             </p>
             <div className="mt-6 space-y-4">
+              {/* Address */}
               <div className="flex items-center">
                 <span className="text-xl text-backgroundColor font-bold mr-4">
                   📍
@@ -74,6 +81,7 @@ const Contact = () => {
                   Nearest metro station - Karol Bagh.
                 </p>
               </div>
+              {/* Contact */}
               <div className="flex items-center">
                 <span className="text-xl text-backgroundColor font-bold mr-4">
                   📞
@@ -82,12 +90,13 @@ const Contact = () => {
                   +91 9953626323, +91 9891517051
                 </p>
               </div>
+              {/* Email */}
               <div className="flex items-center">
                 <span className="text-xl text-backgroundColor font-bold mr-4">
                   📧
                 </span>
                 <p className="text-gray-700">
-                Gautambatrachiropractic@gmail.com
+                  Gautambatrachiropractic@gmail.com
                 </p>
               </div>
             </div>
@@ -101,7 +110,20 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-backgroundColor text-center">
               Book an Appointment
             </h3>
+            {/* Feedback Message */}
+            {message && (
+              <p
+                className={`text-center mt-4 p-2 rounded-md ${
+                  message.includes("error")
+                    ? "bg-red-100 text-red-600"
+                    : "bg-green-100 text-green-600"
+                }`}
+              >
+                {message}
+              </p>
+            )}
             <form ref={form} className="space-y-6" onSubmit={sendEmail}>
+              {/* First Name */}
               <div className="flex flex-col">
                 <label
                   htmlFor="firstName"
@@ -118,6 +140,7 @@ const Contact = () => {
                   required
                 />
               </div>
+              {/* Last Name */}
               <div className="flex flex-col">
                 <label
                   htmlFor="lastName"
@@ -134,6 +157,7 @@ const Contact = () => {
                   required
                 />
               </div>
+              {/* Email Address */}
               <div className="flex flex-col">
                 <label
                   htmlFor="email"
@@ -150,6 +174,7 @@ const Contact = () => {
                   required
                 />
               </div>
+              {/* Phone Number */}
               <div className="flex flex-col">
                 <label
                   htmlFor="phone"
@@ -166,6 +191,23 @@ const Contact = () => {
                   required
                 />
               </div>
+              {/* Message */}
+              <div className="flex flex-col">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-gray-600"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  className="mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-backgroundColor h-24"
+                  required
+                ></textarea>
+              </div>
+              {/* Submit Button */}
               <button
                 type="submit"
                 className="w-full bg-backgroundColor text-white py-3 rounded-lg hover:bg-hoverColor transition duration-300"
