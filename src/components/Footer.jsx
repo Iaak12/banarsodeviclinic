@@ -58,11 +58,7 @@ const Footer = () => {
                   Doctors
                 </Link>
               </li>
-              <li>
-                <Link to="/blogs" className="hover:text-hoverColor">
-                  Blog
-                </Link>
-              </li>
+              
               <li>
                 <Link to="/contact" className="hover:text-hoverColor">
                   Contact Us
