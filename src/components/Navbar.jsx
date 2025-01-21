@@ -89,9 +89,9 @@ const Navbar = () => {
         >
           Doctors
         </Link>
-        <Link to="/blogs" className="hover:text-hoverColor" onClick={closeMenu}>
+        {/* <Link to="/blogs" className="hover:text-hoverColor" onClick={closeMenu}>
           Blog
-        </Link>
+        </Link> */}
         <button
           className="bg-brightColor px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300"
           onClick={handleContactClick}
