@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const form = useRef();
+  // const form = useRef();
   const location = useLocation();
   const [scrollToForm, setScrollToForm] = useState(false);
 
@@ -21,28 +21,23 @@ const Contact = () => {
     }
   }, [scrollToForm]);
 
-  const handleFormSubmit = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_o6jx1jd", // Replace with your Email.js Service ID
-        "template_a75bv9b", // Replace with your Email.js Template ID
-        e.target, // Form element
-        "1ZjJFEuVboqfjjDW8" // Replace with your Email.js User ID
-      )
+      .sendForm('service_o6jx1jd', 'template_a75bv9b', form.current, {
+        publicKey: '1ZjJFEuVboqfjjDW8',
+      })
       .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
-          alert("Your message has been sent successfully!");
+        () => {
+          console.log('SUCCESS!');
         },
         (error) => {
-          console.error("Error sending email:", error.text);
-          alert("Failed to send your message. Please try again.");
-        }
+          console.log('FAILED...', error.text);
+        },
       );
-
-    e.target.reset(); // Clear the form fields
   };
 
   return (
@@ -106,7 +101,7 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-backgroundColor text-center">
               Book an Appointment
             </h3>
-            <form ref={form} className="space-y-6" onSubmit={handleFormSubmit}>
+            <form ref={form} className="space-y-6" onSubmit={sendEmail}>
               <div className="flex flex-col">
                 <label
                   htmlFor="firstName"
