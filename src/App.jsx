@@ -8,6 +8,7 @@ import Doctors from "./components/Doctors";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ServiceDetailPage from "./components/ServiceDetailPage";
+import VideoSection from "./components/VideoSection";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <About />
               <Services />
               <Doctors />
+              <VideoSection/>
               <Contact />
             </>
           }

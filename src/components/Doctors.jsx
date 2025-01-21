@@ -9,7 +9,7 @@ const Doctors = () => {
       img: "/assets/dr1.jpg",
       name: "Ruqayya",
       specialties: "Physical Therapist (PT)",
-      header: "Our Physiotherapists",
+      header: "Our Physiotherapist",
     },
     {
       img: "/assets/about2.jpg", // Add the new image path

@@ -122,8 +122,17 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="mt-8 text-center text-sm border-t border-gray-700 pt-4">
-          <p>&copy; {new Date().getFullYear()} BanarsoDeviClinic. All rights reserved.</p>
-        </div>
+  <p>
+    &copy; {new Date().getFullYear()} BanarsoDeviClinic. All rights reserved. Developed by{' '}
+    <a 
+      href="https://kumarsoft.in/" 
+      className="hover:text-orange-500 transition-colors duration-300"
+    >
+      Kumarsoft
+    </a>
+  </p>
+</div>
+
       </div>
     </footer>
   );
