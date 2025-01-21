@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const form = useRef();
   const location = useLocation();
   const [scrollToForm, setScrollToForm] = useState(false);
 
@@ -18,6 +20,30 @@ const Contact = () => {
         ?.scrollIntoView({ behavior: "smooth" });
     }
   }, [scrollToForm]);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_o6jx1jd", // Replace with your Email.js Service ID
+        "template_a75bv9b", // Replace with your Email.js Template ID
+        e.target, // Form element
+        "1ZjJFEuVboqfjjDW8" // Replace with your Email.js User ID
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          alert("Your message has been sent successfully!");
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          alert("Failed to send your message. Please try again.");
+        }
+      );
+
+    e.target.reset(); // Clear the form fields
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800 pt-16">
@@ -47,7 +73,8 @@ const Contact = () => {
                 </span>
                 <p className="text-gray-700">
                   BANARSO DEVI CLINIC {"{SPINE X}"}<br />
-                  56/7, Basement, Old Rajender Nagar, Opposite Grover Mithaiwala<br />
+                  56/7, Basement, Old Rajender Nagar, Opposite Grover
+                  Mithaiwala<br />
                   New Delhi-110060.<br />
                   Nearest metro station - Karol Bagh.
                 </p>
@@ -64,7 +91,9 @@ const Contact = () => {
                 <span className="text-xl text-backgroundColor font-bold mr-4">
                   📧
                 </span>
-                <p className="text-gray-700">contact@banarsodeviclinic.com</p>
+                <p className="text-gray-700">
+                Gautambatrachiropractic@gmail.com
+                </p>
               </div>
             </div>
           </div>
@@ -77,13 +106,7 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-backgroundColor text-center">
               Book an Appointment
             </h3>
-            <form
-              className="space-y-6"
-              onSubmit={(e) => {
-                e.preventDefault(); // Prevent default form submission
-                alert("Form submitted successfully!");
-              }}
-            >
+            <form ref={form} className="space-y-6" onSubmit={handleFormSubmit}>
               <div className="flex flex-col">
                 <label
                   htmlFor="firstName"
@@ -174,7 +197,9 @@ const Contact = () => {
               <tbody>
                 <tr>
                   <td className="py-2 px-4 border-b">Monday</td>
-                  <td className="py-2 px-4 border-b">11am-2:30pm, 5:30pm-7:30pm</td>
+                  <td className="py-2 px-4 border-b">
+                    11am-2:30pm, 5:30pm-7:30pm
+                  </td>
                 </tr>
                 <tr>
                   <td className="py-2 px-4 border-b">Tuesday</td>
@@ -182,7 +207,9 @@ const Contact = () => {
                 </tr>
                 <tr>
                   <td className="py-2 px-4 border-b">Wednesday</td>
-                  <td className="py-2 px-4 border-b">11am-2:30pm, 5:30pm-7:30pm</td>
+                  <td className="py-2 px-4 border-b">
+                    11am-2:30pm, 5:30pm-7:30pm
+                  </td>
                 </tr>
                 <tr>
                   <td className="py-2 px-4 border-b">Thursday</td>
@@ -190,7 +217,9 @@ const Contact = () => {
                 </tr>
                 <tr>
                   <td className="py-2 px-4 border-b">Friday</td>
-                  <td className="py-2 px-4 border-b">11am-2:30pm, 5:30pm-7:30pm</td>
+                  <td className="py-2 px-4 border-b">
+                    11am-2:30pm, 5:30pm-7:30pm
+                  </td>
                 </tr>
                 <tr>
                   <td className="py-2 px-4 border-b">Saturday</td>

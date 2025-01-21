@@ -77,7 +77,7 @@ const Footer = () => {
             <p className="text-sm mb-4">Stay connected through social media:</p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/gautam.batra.5/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-hoverColor"
@@ -85,7 +85,7 @@ const Footer = () => {
                 <FaFacebook size={24} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/gautambatrachiropractic/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-hoverColor"
@@ -93,7 +93,7 @@ const Footer = () => {
                 <FaInstagram size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/gautam-batra-2b6a61129/?originalSubdomain=in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-hoverColor"
@@ -101,7 +101,7 @@ const Footer = () => {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/channel/UC3epKEMJF_V8nCdir_Kim8A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-red-500"
